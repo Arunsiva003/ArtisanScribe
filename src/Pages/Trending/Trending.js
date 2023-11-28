@@ -7,6 +7,7 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
+  console.log('MOVIEDB_API_KEY:', process.env.REACT_APP_API_KEY);
 
   const fetchTrending = async () => {
     const { data } = await axios.get(
